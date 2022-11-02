@@ -41,4 +41,9 @@ def create_custom_token():
     return 'Need UID'
 
 
+@app.route('/upload', methods=['POST'])
+def upload_students():
+    return request.form.get('file')
+
+
 app.run(debug=True, host="0.0.0.0", port=8090)
